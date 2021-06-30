@@ -25,9 +25,7 @@ export default function Textbox({ fieldProps, onChange }: TextboxPropsType) {
       <input
         {...(required && { required: true })}
         pattern={pattern}
-        onChange={(e: { target: { value: string } }) =>
-          onChange(e.target.value)
-        }
+        onChange={(e) => onChange(e.target.value)}
         type={validation.type}
         className="form-control"
         id={`textbox_${id}`}
