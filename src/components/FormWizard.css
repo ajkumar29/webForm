@@ -1,0 +1,23 @@
+.pageHeader {
+    display: flex;
+    justify-content: center;
+}
+
+.formWizardTitle {
+    text-align: center;
+    font-size: xx-large;
+    font-weight: bold;
+    padding: 20px;
+}
+
+.formWizard {
+  background-color: #282c34;
+  min-height: 100vh;
+  color: white;
+  overflow: scroll;
+}
+
+.formPage {
+    width: 50%;
+    margin: auto;
+}
