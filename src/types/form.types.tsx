@@ -1,3 +1,6 @@
+export interface FormValuesType {
+  [key: string]: any;
+}
 export interface FormType {
   label: string;
   doneMessage: string;
