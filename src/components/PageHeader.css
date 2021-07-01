@@ -1,0 +1,28 @@
+.header {
+    padding: 10px;
+    font-size: x-large;
+    border: 3px;
+    border-color: aliceblue;
+    border-style: solid;
+    margin: 30px;
+    border-radius: 0.25rem;
+    background-color:#A22516;
+
+}
+
+.selected {
+    background-color: #1692A2;
+    text-decoration: underline;
+}
+
+.completed {
+    background-color:#4FA916;
+}
+
+@media (max-width: 800px) {
+    .header {
+        padding: 5px;
+        font-size: large;
+        margin: 10px;
+    }
+}

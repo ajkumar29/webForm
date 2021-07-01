@@ -1,8 +1,9 @@
 import { useState } from "react";
 import Page from "./Page";
 import DonePage from "./DonePage";
-import { FormType, FormValuesType } from "../types/form.types";
+import PageHeader from "./PageHeader";
 import "./FormWizard.css";
+import { FormType, PageType, FormValuesType } from "../types/form.types";
 
 import { connect } from "react-redux";
 import { updateFormData } from "../redux/formData/formData.actions";
@@ -17,11 +18,23 @@ function FormWizard({ form, updateFormData }: FormWizardPropsType) {
   const [pageToShow, setPageToShow] = useState(0);
   const [done, setDone] = useState(false);
 
-  const pagesToShow = (pages: any) => {
-    let pagesInclDonePage = pages.map((page: any, index: number) => (
-      <div>{page.label}</div>
+  const pagesToShow = (pages: PageType[]) => {
+    let pagesInclDonePage = pages.map((page, index) => (
+      <PageHeader
+        key={page.id}
+        label={page.label}
+        selected={!done && page.id === pages[pageToShow].id}
+        completed={done || index < pageToShow}
+      />
     ));
-    pagesInclDonePage.push(<div>Done</div>);
+    pagesInclDonePage.push(
+      <PageHeader
+        key={"donePage"}
+        label={"Done"}
+        selected={done}
+        completed={false}
+      />
+    );
     return pagesInclDonePage;
   };
 

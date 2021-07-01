@@ -1,3 +1,4 @@
+import "./Dropdown.css";
 import { DropdownFieldType } from "../../types/form.types";
 
 interface DropdownPropsType {

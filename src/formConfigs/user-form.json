@@ -20,7 +20,7 @@
                     "label": "Role",
                     "id": "role",
                     "component": "dropdown",
-                    "data": ["software engineer", "product owner", "scrum master", "testing engineer", "designer"],
+                    "data": ["software engineer", "product owner", "scrum master", "testing engineer", "Designer"],
                     "placeholderText": "Please select your role",
                     "required": true
                 },
@@ -41,6 +41,7 @@
                     "required": true,
                     "validation":{
                         "type": "password",
+                        "validRegex":"(?=.*\\d)(?=.*[a-z])(?=.*[A-Z]).{10,}",
                         "errorMessage": "Password must be atleast 10 characters. It must have atleast 1 number, 1 upper case and 1 lower case letter."
                     },
                     "placeholderText": "Create a password"
@@ -60,7 +61,7 @@
                 {
                     "component":"checkbox",
                     "id": "comms-tick",
-                    "label":"Receive communications..."
+                    "label":"Recieve communications..."
                 },
                 {
                     "component":"checkbox",

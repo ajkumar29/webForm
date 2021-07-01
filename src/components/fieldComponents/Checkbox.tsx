@@ -1,3 +1,4 @@
+import "./Checkbox.css";
 import { CheckboxFieldType } from "../../types/form.types";
 
 interface CheckboxPropsType {

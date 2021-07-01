@@ -1,6 +1,7 @@
 .pageHeader {
     display: flex;
     justify-content: center;
+
 }
 
 .formWizardTitle {
@@ -20,4 +21,19 @@
 .formPage {
     width: 50%;
     margin: auto;
+}
+
+@media (max-width: 800px) {
+    .formPage {
+        width: 70%;
+        margin: auto;
+    }
+
+    .formWizardTitle {
+        text-align: center;
+        font-size: x-large;
+        font-weight: bold;
+        padding: 20px;
+    }
+
 }
