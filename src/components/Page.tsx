@@ -5,7 +5,10 @@ import { FieldType, FormValuesType } from "../types/form.types";
 import { mapToComponent } from "./ComponentHandler";
 
 interface PagePropsType {
+  //fields to be displayed on the page
   fields: FieldType[];
+
+  //callback function to be triggered when submit button is clicked on the current page
   onSubmitClick: (
     e: { preventDefault: () => void },
     formValues: FormValuesType
@@ -15,6 +18,7 @@ interface PagePropsType {
 export default function Page({ fields, onSubmitClick }: PagePropsType) {
   const [formValues, setFormValues] = useState<FormValuesType>({});
 
+  //function to change state when field changes
   const onFieldChange = (value: any, id: string) => {
     let newValues = { ...formValues };
     newValues[id] = value;

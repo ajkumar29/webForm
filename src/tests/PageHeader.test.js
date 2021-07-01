@@ -3,7 +3,7 @@ import { render } from "@testing-library/react";
 
 const setup = (selected, completed) => {
   const { getByText } = render(
-    <PageHeader label={"test"} selected={selected} completed={completed} />
+    <PageHeader title={"test"} selected={selected} completed={completed} />
   );
   return { getByText };
 };

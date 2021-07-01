@@ -1,14 +1,19 @@
 import "./PageHeader.css";
 
 interface PageHeaderPropsType {
+  //boolean to indicate whether the current heading is the form being displayed
   selected: boolean;
-  label: string;
+
+  //label to display has heading
+  title: string;
+
+  //boolean to indicate if user has completed the page and moved onto next page
   completed: boolean;
 }
 
 export default function PageHeader({
   selected,
-  label,
+  title,
   completed,
 }: PageHeaderPropsType) {
   return (
@@ -17,7 +22,7 @@ export default function PageHeader({
         completed ? " completed" : ""
       }`}
     >
-      {label}
+      {title}
     </div>
   );
 }

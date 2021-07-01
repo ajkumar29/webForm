@@ -13,8 +13,8 @@ export default function Textbox({ fieldProps, onChange }: TextboxPropsType) {
     placeholderText = "",
     id,
   } = fieldProps;
-  const pattern = validation && validation.validRegex;
-  const customValidationErrorMessage = validation && validation.errorMessage;
+  const pattern = validation && validation.validRegex; //Regex pattern from config
+  const customValidationErrorMessage = validation && validation.errorMessage; //custom validation message - appears in pop up if regex validation failed
 
   return (
     <div className="form-group">

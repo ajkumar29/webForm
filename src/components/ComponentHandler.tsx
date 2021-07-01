@@ -3,6 +3,11 @@ import Dropdown from "./fieldComponents/Dropdown";
 import Textbox from "./fieldComponents/Textbox";
 import Checkbox from "./fieldComponents/Checkbox";
 
+/*
+Function which maps component text in config to react component
+Add new components here for mapping with form config
+*/
+
 export const mapToComponent = (
   field: FieldType,
   onFieldChange: (value: string | boolean, id: string) => void

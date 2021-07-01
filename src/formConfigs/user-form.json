@@ -1,9 +1,9 @@
 {
-    "label": "User Register Form",
+    "title": "User Register Form",
     "doneMessage": "Thank you. You will recieve an email shortly",
     "pages":[
             {
-            "label": "User",
+            "title": "User",
             "id":"user",
             "fields": [
                 {
@@ -13,7 +13,7 @@
                     "required": true,
                     "validation":{
                         "type": "text"
-                                        },
+                    },
                     "placeholderText":"Enter name"
                 },
                 {
@@ -50,7 +50,7 @@
 
         },
         {
-            "label": "Privacy",
+            "title": "Privacy",
             "id": "privacy",
             "fields": [
                 {

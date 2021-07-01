@@ -16,13 +16,13 @@ export default function Dropdown({ fieldProps, onChange }: DropdownPropsType) {
       </label>
       <select
         {...(required && { required: true })}
-        defaultValue="default"
+        defaultValue=""
         onChange={(e) => onChange(e.target.value)}
         className="custom-select"
         id={`dropdown_${id}`}
         data-testid="select"
       >
-        <option value="default" hidden disabled>
+        <option value="" hidden disabled>
           {placeholderText}
         </option>
         {data.map((option) => (

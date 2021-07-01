@@ -9,20 +9,24 @@ import { connect } from "react-redux";
 import { updateFormData } from "../redux/formData/formData.actions";
 
 interface FormWizardPropsType {
+  //entire form to be rendered by the wizard
   form: FormType;
+
+  //function to update redux store
   updateFormData: (arg0: FormValuesType) => void;
 }
 
 function FormWizard({ form, updateFormData }: FormWizardPropsType) {
-  const { label, pages, doneMessage } = form;
-  const [pageToShow, setPageToShow] = useState(0);
-  const [done, setDone] = useState(false);
+  const { title, pages, doneMessage } = form;
+  const [pageToShow, setPageToShow] = useState(0); //index of page to show on screen
+  const [done, setDone] = useState(false); //state to indicate whether user has completed forms
 
-  const pagesToShow = (pages: PageType[]) => {
+  //generates headers to be displayed above form
+  const headersToShow = (pages: PageType[]) => {
     let pagesInclDonePage = pages.map((page, index) => (
       <PageHeader
         key={page.id}
-        label={page.label}
+        title={page.title}
         selected={!done && page.id === pages[pageToShow].id}
         completed={done || index < pageToShow}
       />
@@ -30,7 +34,7 @@ function FormWizard({ form, updateFormData }: FormWizardPropsType) {
     pagesInclDonePage.push(
       <PageHeader
         key={"donePage"}
-        label={"Done"}
+        title={"Done"}
         selected={done}
         completed={false}
       />
@@ -38,6 +42,7 @@ function FormWizard({ form, updateFormData }: FormWizardPropsType) {
     return pagesInclDonePage;
   };
 
+  //function to be triggered when submit button is clicked
   const onSubmitClick = (
     e: { preventDefault: () => void },
     values: FormValuesType
@@ -53,9 +58,9 @@ function FormWizard({ form, updateFormData }: FormWizardPropsType) {
 
   return (
     <div className="formWizard">
-      <div className="formWizardTitle">{label}</div>
+      <div className="formWizardTitle">{title}</div>
 
-      <div className="pageHeader">{pagesToShow(pages)}</div>
+      <div className="pageHeader">{headersToShow(pages)}</div>
 
       <div className="formPage">
         {!done ? (
