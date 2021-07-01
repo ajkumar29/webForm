@@ -1,9 +1,9 @@
 ## Instructions
 
-To test the production build, please open the `build` folder and open `index.html` in your browser.\
+To test the production build, please open the `build` folder and open `index.html` in your browser.
 
 To test in development mode, please run `npm i` to install the necessary packages.\
-You can then run `npm start` to run in development mode. \
+You can then run `npm start` to run in development mode.
 
 To run the DOM tests, please use the `npm test` to open jest test runner - detailed below.
 To run the end to end tests, please use the `npm run e2e` after executing `npm start` in another terminal - detailed below.
@@ -35,7 +35,7 @@ Should you wish to change the port number, please update cypress.json file to po
 
 ### `npm run build`
 
-(I have already run this and included the build folder for your viewing. Please see `build` folder and open `index.html` in your browser to test the production build code).\
+(I have already run this and included the build folder for your viewing. Please see `build` folder and open `index.html` in your browser to test the production build code).
 
 Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
