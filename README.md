@@ -5,8 +5,8 @@ To test the production build, please open the `build` folder and open `index.htm
 To test in development mode, please run `npm i` to install the necessary packages.\
 You can then run `npm start` to run in development mode.
 
-To run the DOM tests, please use the `npm test` to open jest test runner - detailed below.
-To run the end to end tests, please use the `npm run e2e` after executing `npm start` in another terminal - detailed below.
+To run the DOM tests, please run `npm test` to open jest test runner - detailed below.
+To run the end to end tests, please run `npm run e2e` and select `formwizard.spec.js` in the cypress test runner after executing `npm start` in another terminal - detailed below.
 
 To rebuild production build, please use `npm run build`.
 
@@ -29,9 +29,10 @@ Launches the jest test runner in the interactive watch mode.
 ### `npm run e2e`
 
 Launches the cypress test runner.\
+Please select `formwizard.spec.js` in the cypress test runner window.\
 This will run the end to end testing.\
 Please make sure you are running the application on [http://localhost:3000](http://localhost:3000) by executing `npm start` before launching cypress. \
-Should you wish to change the port number, please update cypress.json file to point to the new port.
+Should you wish to change the port number for the dev server, please update cypress.json file to point to the new port.
 
 ### `npm run build`
 
