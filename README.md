@@ -17,7 +17,7 @@ Launches the jest test runner in the interactive watch mode.\
 ### `npm run e2e`
 
 Launches the cypress test runner.\
-Please make sure you are running the application on localhost:3000 by executing `npm start` before launching cypress. \
+Please make sure you are running the application on [http://localhost:3000](http://localhost:3000) by executing `npm start` before launching cypress. \
 Should you wish to change the port number, please update cypress.json file to point to the new port.
 
 ### `npm run build`
