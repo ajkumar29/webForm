@@ -6,6 +6,7 @@ To test in development mode, please run `npm i` to install the necessary package
 You can then run `npm start` to run in development mode.
 
 To run the DOM tests, please run `npm test` to open jest test runner - detailed below.
+
 To run the end to end tests, please run `npm run e2e` and select `formwizard.spec.js` in the cypress test runner after executing `npm start` in another terminal - detailed below.
 
 To rebuild production build, please use `npm run build`.
