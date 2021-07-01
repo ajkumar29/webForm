@@ -5,7 +5,7 @@ import Checkbox from "./fieldComponents/Checkbox";
 
 /*
 Function which maps component text in config to react component
-Add new components here for mapping with form config
+Add new component mappings here after creating component under the field components directory
 */
 
 export const mapToComponent = (

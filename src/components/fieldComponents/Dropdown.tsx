@@ -20,7 +20,6 @@ export default function Dropdown({ fieldProps, onChange }: DropdownPropsType) {
         onChange={(e) => onChange(e.target.value)}
         className="custom-select"
         id={`dropdown_${id}`}
-        data-testid="select"
       >
         <option value="" hidden disabled>
           {placeholderText}

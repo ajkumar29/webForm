@@ -9,17 +9,17 @@ import { connect } from "react-redux";
 import { updateFormData } from "../redux/formData/formData.actions";
 
 interface FormWizardPropsType {
-  //entire form to be rendered by the wizard
+  //contains entire form to be rendered by the wizard
   form: FormType;
 
-  //function to update redux store
+  //function to update the form values in redux store
   updateFormData: (arg0: FormValuesType) => void;
 }
 
 function FormWizard({ form, updateFormData }: FormWizardPropsType) {
   const { title, pages, doneMessage } = form;
-  const [pageToShow, setPageToShow] = useState(0); //index of page to show on screen
-  const [done, setDone] = useState(false); //state to indicate whether user has completed forms
+  const [pageToShow, setPageToShow] = useState(0); //index of page of the form to display on screen
+  const [done, setDone] = useState(false); //state to indicate whether user has completed all pages of the form
 
   //generates headers to be displayed above form
   const headersToShow = (pages: PageType[]) => {
@@ -42,7 +42,6 @@ function FormWizard({ form, updateFormData }: FormWizardPropsType) {
     return pagesInclDonePage;
   };
 
-  //function to be triggered when submit button is clicked
   const onSubmitClick = (
     e: { preventDefault: () => void },
     values: FormValuesType
@@ -50,8 +49,10 @@ function FormWizard({ form, updateFormData }: FormWizardPropsType) {
     e.preventDefault();
     updateFormData(values);
     if (pageToShow < pages.length - 1) {
+      //case where more pages are present, i.e. ;ast page hasnt been reached
       setPageToShow(pageToShow + 1);
     } else {
+      //case where last page has been reached
       setDone(true);
     }
   };

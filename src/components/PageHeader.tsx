@@ -1,10 +1,10 @@
 import "./PageHeader.css";
 
 interface PageHeaderPropsType {
-  //boolean to indicate whether the current heading is the form being displayed
+  //boolean to indicate whether the current highlighted heading is the page being displayed
   selected: boolean;
 
-  //label to display has heading
+  //title of page being displayed
   title: string;
 
   //boolean to indicate if user has completed the page and moved onto next page

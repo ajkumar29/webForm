@@ -55,18 +55,18 @@
             "fields": [
                 {
                     "component":"checkbox",
-                    "id": "update-tick",
-                    "label":"Recieve updates..."
+                    "id": "update-check",
+                    "label":"Please check if you are happy to recieve updates from us."
                 },
                 {
                     "component":"checkbox",
-                    "id": "comms-tick",
-                    "label":"Recieve communications..."
+                    "id": "comms-check",
+                    "label":"Please check if you are happy to receive communications from us."
                 },
                 {
                     "component":"checkbox",
-                    "id": "accurate-tick",
-                    "label":"Info is accurate...",
+                    "id": "accurate-info-check",
+                    "label":"Please check to confirm the information provided is accurate to the best of your knowledge",
                     "required": true
                 }
             ]
