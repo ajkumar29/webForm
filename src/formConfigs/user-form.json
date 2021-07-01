@@ -20,7 +20,7 @@
                     "label": "Role",
                     "id": "role",
                     "component": "dropdown",
-                    "data": ["software engineer", "product owner", "scrum master", "testing engineer", "Designer"],
+                    "data": ["Software engineer", "Product owner", "Scrum master", "Testing engineer", "Designer"],
                     "placeholderText": "Please select your role",
                     "required": true
                 },
