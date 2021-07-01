@@ -1,10 +1,13 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import "./Page.css";
 import { FieldType, FormValuesType } from "../types/form.types";
 import { mapToComponent } from "./ComponentHandler";
 
 interface PagePropsType {
+  //ID of page
+  id: string;
+
   //fields to be displayed on the page
   fields: FieldType[];
 
@@ -15,7 +18,11 @@ interface PagePropsType {
   ) => void;
 }
 
-export default function Page({ fields, onSubmitClick }: PagePropsType) {
+export default function Page({
+  id: pageId,
+  fields,
+  onSubmitClick,
+}: PagePropsType) {
   const [formValues, setFormValues] = useState<FormValuesType>({});
 
   //function to change state when field changes
@@ -24,6 +31,10 @@ export default function Page({ fields, onSubmitClick }: PagePropsType) {
     newValues[id] = value;
     setFormValues(newValues);
   };
+
+  useEffect(() => {
+    setFormValues({});
+  }, [pageId]);
 
   return (
     <form

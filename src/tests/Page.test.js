@@ -5,8 +5,9 @@ import { testForm } from "./testForm";
 
 const setup = () => {
   const testFields = testForm["pages"][0].fields;
+  const testId = testForm["pages"][0].id;
   const { getByText } = render(
-    <Page fields={testFields} onSubmitClick={() => {}} />
+    <Page id={testId} fields={testFields} onSubmitClick={() => {}} />
   );
   return { getByText };
 };

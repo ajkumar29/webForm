@@ -47,7 +47,11 @@ function FormWizard({ form, updateFormData }: FormWizardPropsType) {
     values: FormValuesType
   ) => {
     e.preventDefault();
-    updateFormData(values);
+    const currPageId = pages[pageToShow].id;
+    let updatedValues: FormValuesType;
+    updatedValues = {};
+    updatedValues[currPageId] = { ...values };
+    updateFormData(updatedValues);
     if (pageToShow < pages.length - 1) {
       //case where more pages are present, i.e. ;ast page hasnt been reached
       setPageToShow(pageToShow + 1);
@@ -66,6 +70,7 @@ function FormWizard({ form, updateFormData }: FormWizardPropsType) {
       <div className="formPage">
         {!done ? (
           <Page
+            id={pages[pageToShow].id}
             fields={pages[pageToShow].fields}
             onSubmitClick={onSubmitClick}
           />

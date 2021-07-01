@@ -27,7 +27,7 @@ describe("Renders Form Wizard", () => {
   it("Can submit and go to next page", () => {
     cy.visit("/");
     cy.get("#textbox_name").type("test");
-    cy.get("#dropdown_role").select("software engineer");
+    cy.get("#dropdown_role").select("Software engineer");
     cy.get("#textbox_email").type("test@gmail.com");
     cy.get("#textbox_password").type("Password123");
     cy.get('[type="submit"]').click();
@@ -52,7 +52,7 @@ describe("Renders Form Wizard", () => {
   it("Can submit form end to end", () => {
     cy.visit("/");
     cy.get("#textbox_name").type("test");
-    cy.get("#dropdown_role").select("software engineer");
+    cy.get("#dropdown_role").select("Software engineer");
     cy.get("#textbox_email").type("test@gmail.com");
     cy.get("#textbox_password").type("Password123");
     cy.get('[type="submit"]').click();
@@ -91,7 +91,7 @@ describe("Validates fields", () => {
   it("Can validate required checkboxes", () => {
     cy.visit("/");
     cy.get("#textbox_name").type("test");
-    cy.get("#dropdown_role").select("software engineer");
+    cy.get("#dropdown_role").select("Software engineer");
     cy.get("#textbox_email").type("test@gmail.com");
     cy.get("#textbox_password").type("Password123");
     cy.get('[type="submit"]').click();
@@ -118,7 +118,7 @@ describe("Validates fields", () => {
   it("Can validate email", () => {
     cy.visit("/");
     cy.get("#textbox_name").type("test");
-    cy.get("#dropdown_role").select("software engineer");
+    cy.get("#dropdown_role").select("Software engineer");
     cy.get("#textbox_email").type("testgmail.com");
     cy.get('[type="submit"]').click();
     cy.get("#textbox_email").then(($input) => {
@@ -131,7 +131,7 @@ describe("Validates fields", () => {
   it("Can validate password", () => {
     cy.visit("/");
     cy.get("#textbox_name").type("test");
-    cy.get("#dropdown_role").select("software engineer");
+    cy.get("#dropdown_role").select("Software engineer");
     cy.get("#textbox_email").type("test@gmail.com");
     cy.get('[type="submit"]').click();
     cy.get("#textbox_password").type("password");
